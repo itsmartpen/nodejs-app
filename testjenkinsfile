@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages{
       stage('Dep install'){
-        agent { docker { image 'node:9.8.0'}}
+        agent { docker { image 'node:14.18.0'}}
         steps{
             //sh 'cat /etc/os-release'
            // sh 'exit'
