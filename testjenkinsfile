@@ -15,6 +15,14 @@ pipeline{
             sh 'npm pack'
         }
       } 
+    stages{
+      stage('sonar-scan'){
+        steps{
+            withSonarQubeEnv('sonarQube'){
+        sh  'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=itsmartpen_nodejs-app'
+            }
+        }
+    }
       stage('upload artifact'){
         steps{
           sh 'curl -uadmin:AP6Bdwx4zuzatzGgcxgbkd8vYRm -T \
