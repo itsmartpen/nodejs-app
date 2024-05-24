@@ -19,7 +19,7 @@ pipeline{
         steps{
           sh 'curl -uadmin:AP6Bdwx4zuzatzGgcxgbkd8vYRm -T \
           *.tgz \
-          "http://54.158.175.61:8081/artifactory/utc-nodejs/utc-app/app1/${BUILD_ID}.tgz"'
+          "http://54.89.179.136:8081/artifactory/code-nodejs/file2.tgz"'
         }
       }
     }
